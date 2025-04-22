@@ -1,61 +1,64 @@
 import React, { useRef, useState } from "react";
 
-const Header = (item:any) => {
-    const [open, setOpen] = useState(false);
-    const handleOpen = () => {
-        setOpen(!open);
-      };
-    const MenuList =[{
-        title:"Нүүр",
-        href:"#"
-    },{
-        title:"Бидний тухай",
-        href:"#1"
+const Header = (item: any) => {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => {
+    setOpen(!open);
+  };
+  const MenuList = [
+    {
+      title: "Нүүр",
+      href: "#",
     },
     {
-        title:"Service",
-        href:"#2"
+      title: "Бидний тухай",
+      href: "#1",
     },
     {
-        title:"Project",
-        href:"#3"
+      title: "Service",
+      href: "#2",
     },
     {
-        title:"Team",
-        href:"#4"
+      title: "Project",
+      href: "#3",
     },
     {
-        title:"blog",
-        href:"#5"
-    },]
-    return (
-        <div data-sal="slide-down"
-        data-delay="1000"
-        data-sal-duration={1000}>
-        <div
+      title: "Gallery",
+      href: "#4",
+    },
+    {
+      title: "Мэдээ",
+      href: "#5",
+    },
+  ];
+  return (
+    <div data-sal="slide-down" data-delay="1000" data-sal-duration={1000}>
+      <div
         className={`${
           item.scroll ? "fixed bg-white  " : " absolute "
         } top-0 z-50 py-3 w-full hidden md:block md:drop-shadow-xl`}
       >
-   <div className="container mx-auto px-10 md:px-20 z-50 ">
-       <div className="md:flex md:justify-between items-center">
-       <div>
-           <img className="w-40" src="/and.png"/>
-       </div> 
-       <div className="flex space-x-5 font-semibold md:text-lg lg:text-xl items-center"> 
-       {MenuList.map((items)=>(
-           <div  className="">
-          <a href={items.href}  className={`${item.scroll ? "text-black" : "text-white"}`}>
-          {items.title}
-          </a>
-           </div>
-       ))}
-     
-       </div>
-   </div>
-   </div>
-   </div>
-   {/* <>
+        <div className="container mx-auto px-10 md:px-20 z-50 ">
+          <div className="md:flex md:justify-between items-center">
+            <div>
+              <img className="w-40" src="/and.png" />
+            </div>
+            <div className="flex space-x-5 font-semibold md:text-lg lg:text-xl items-center">
+              {MenuList.map((items) => (
+                <div className="">
+                  <a
+                    href={items.href}
+                    className={`${item.scroll ? "text-black" : "text-white"}`}
+                  >
+                    {items.title}
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <>
    <div
      className="top-10 fixed  z-50  right-5 font-cool cursor-pointer  md:hidden"
      onClick={handleOpen}
@@ -180,8 +183,7 @@ const Header = (item:any) => {
         </div>
       </> */}
     </div>
-    )
-  }
-  
-  export default Header
-  
+  );
+};
+
+export default Header;

@@ -32,6 +32,7 @@ const Home: NextPage = () => {
     }
     sal();
   }, []);
+
   return (
     <div className="reltive">
       <Layout>
@@ -44,12 +45,8 @@ const Home: NextPage = () => {
         <div className="container mx-auto px-10 md:px-20 ">
           <AboutUs />
         </div>
-        <div>
-          {" "}
-          <SupportTeam />
-        </div>
         <div id="2">
-          <OurServices />{" "}
+          <OurServices />
         </div>
         <div className="container mx-auto px-10 md:px-20 ">
           <ClientReview />
@@ -67,9 +64,6 @@ const Home: NextPage = () => {
         </div>
         <div id="5">
           <RecentNews />
-        </div>
-        <div className="container mx-auto px-10 md:px-20 ">
-          <FAQ />
         </div>
         <WhatPeopleAreSay />
         <div
