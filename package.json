@@ -1,0 +1,38 @@
+{
+  "name": "project1",
+  "author": "Altanshagai",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@types/slick-carousel": "^1.6.37",
+    "antd": "^4.18.4",
+    "google-map-react": "^2.1.10",
+    "moment": "^2.29.1",
+    "next": "^11.1.1-canary.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
+    "react-slick": "^0.28.1",
+    "sal.js": "^0.8.5",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "@swc/cli": "^0.1.55",
+    "@swc/core": "^1.2.127",
+    "@types/google-map-react": "^2.1.5",
+    "@types/node": "17.0.8",
+    "@types/react": "17.0.38",
+    "@types/react-slick": "^0.23.8",
+    "autoprefixer": "^10.4.2",
+    "eslint": "8.6.0",
+    "eslint-config-next": "12.0.7",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.15",
+    "typescript": "4.5.4"
+  }
+}

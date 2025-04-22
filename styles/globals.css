@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import '~sal.js/dist/sal.css';
+html{
+  scroll-behavior: smooth;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+.slide img{
+  width:5rem;
+  margin: 0 auto;
+  }
+  
+  .slide{
+    transform: scale(0.7);
+    transition: transform 300ms;
+    opacity: 0.5;
+  }
+  
+  .activeSlide{
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  
+  .arrow{
+    background-color: #fff;
+    position: absolute;
+  cursor: pointer;
+  z-index: 10;
+  }
+  
+  .arrow svg{
+    transition: color 300ms;
+  }
+  
+  .arrow svg:hover {
+    color: #68edff;
+  }
+  
+  .next {
+    right: 0%;
+    top: 50%;
+  }
+  
+  .prev {
+    left: 0%;
+    top: 50%;
+  }
+  
