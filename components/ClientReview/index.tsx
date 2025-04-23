@@ -4,6 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const ClientReview = () => {
+  const TypedSlider = Slider as unknown as React.FC<any>;
+
   const settings = {
     dots: true,
     infinite: true,
@@ -85,7 +87,8 @@ const ClientReview = () => {
         </div>
       </div>
       <div className="relative p-5">
-        <Slider {...settings}>
+        {/* @ts-ignore */}
+        <TypedSlider {...settings}>
           {data.map((item) => (
             <div
               className="p-5 bg-white"
@@ -110,7 +113,7 @@ const ClientReview = () => {
               </div>
             </div>
           ))}
-        </Slider>
+        </TypedSlider>
       </div>
     </div>
   );
