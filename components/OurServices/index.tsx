@@ -5,8 +5,10 @@ import { AiFillCar } from "react-icons/ai";
 import { IoAirplaneSharp } from "react-icons/io5";
 import { MdLocalShipping } from "react-icons/md";
 import { FaShip } from "react-icons/fa";
-import {BsBuilding} from "react-icons/bs";
+import { BsBuilding } from "react-icons/bs";
+
 const OurServices = () => {
+  const TypedSlider = Slider as unknown as React.FC<any>;
   const settings = {
     dots: true,
     infinite: true,
@@ -138,7 +140,7 @@ const OurServices = () => {
             байна.
           </div>
         </div>
-        <Slider {...settings}>
+        <TypedSlider {...settings}>
           {item.map((element) => (
             <div
               className=" p-2"
@@ -160,7 +162,7 @@ const OurServices = () => {
               </div>
             </div>
           ))}
-        </Slider>
+        </TypedSlider>
       </div>
     </div>
   );

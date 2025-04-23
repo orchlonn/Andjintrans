@@ -87,7 +87,6 @@ const ClientReview = () => {
         </div>
       </div>
       <div className="relative p-5">
-        {/* @ts-ignore */}
         <TypedSlider {...settings}>
           {data.map((item) => (
             <div

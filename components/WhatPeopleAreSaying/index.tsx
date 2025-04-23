@@ -27,6 +27,7 @@ const images = [
 ];
 
 const WhatPeopleAreSay = () => {
+  const TypedSlider = Slider as unknown as React.FC<any>;
   const NextArrow = ({ onClick }: any) => {
     return (
       <div className="arrow next" onClick={onClick}>
@@ -102,7 +103,7 @@ const WhatPeopleAreSay = () => {
             </div>
           </div>
         </div>
-        <Slider {...settings}>
+        <TypedSlider {...settings}>
           {images.map((img, idx) => (
             <div className={idx === imgIndex ? "slide activeSlide" : "slide"}>
               <div className="bg-white p-5 py-10 space-y-2.5 text-center">
@@ -121,7 +122,7 @@ const WhatPeopleAreSay = () => {
               </div>
             </div>
           ))}
-        </Slider>
+        </TypedSlider>
       </div>
     </div>
   );

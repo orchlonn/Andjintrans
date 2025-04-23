@@ -9,7 +9,7 @@ interface IProps {
   items: any[];
 }
 
-function NextArrow(props:any) {
+function NextArrow(props: any) {
   const { onClick } = props;
   return (
     <div
@@ -23,7 +23,7 @@ function NextArrow(props:any) {
   );
 }
 
-function PrevArrow(props:any) {
+function PrevArrow(props: any) {
   const { onClick } = props;
   return (
     <div
@@ -36,6 +36,7 @@ function PrevArrow(props:any) {
 }
 
 const CustomSlider = ({ items }: IProps) => {
+  const TypedSlider = Slider as unknown as React.FC<any>;
   const [current, setCurrent] = React.useState(0);
   const sliderRef = React.useRef(null);
   const settings = {
@@ -48,7 +49,7 @@ const CustomSlider = ({ items }: IProps) => {
     arrows: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
-    beforeChange: (_:any, index:any) => {
+    beforeChange: (_: any, index: any) => {
       setCurrent(index);
     },
     responsive: [
@@ -64,43 +65,41 @@ const CustomSlider = ({ items }: IProps) => {
   };
   return (
     <div className="relative">
-      <Slider {...settings} ref={sliderRef}>
-        {[...items]
-
-          .map((item, i) => (
-            <div className={`outline-none w-full relative`} key={`item-${i}`}>
-              <section
-                className={`p-20 overflow-hidden transform transition-all h-screen lg:h-slider bg-white bg-cover bg-center text-white w-full flex items-center`}
-                
-              >
-                {item?.cover && (
-                  <Image
-                    src={item?.cover}
-                    alt=""
-                    className={`object-cover`}
-                    layout="fill"
-                    objectFit="cover"
-                    objectPosition="top"
-                    quality={100}
-                    placeholder="blur"
-                    blurDataURL={item?.cover}
-                  />
-                )}
-
-
-              </section>
-              <div className="absolute top-0 z-40 h-full w-full bg-black opacity-50"/>
-            </div>
-          ))}
-      </Slider>
-    <div className="absolute bottom-36 md:bottom-20 md:w-2/3">
-      <div className="uppercase px-10 md:px-40  font-bold text-white text-3xl lg:text-4xl"
-      data-sal="slide-down"
-      data-delay="1000"
-      data-sal-duration={1000}
-          >
-          YOU TRUSTED LOGISTIC <a className="text-[#277ecd]">PARTNER</a> IN WORLDWIDE SMART WAY</div>
-    </div>
+      <TypedSlider {...settings} ref={sliderRef}>
+        {[...items].map((item, i) => (
+          <div className={`outline-none w-full relative`} key={`item-${i}`}>
+            <section
+              className={`p-20 overflow-hidden transform transition-all h-screen lg:h-slider bg-white bg-cover bg-center text-white w-full flex items-center`}
+            >
+              {item?.cover && (
+                <Image
+                  src={item?.cover}
+                  alt=""
+                  className={`object-cover`}
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="top"
+                  quality={100}
+                  placeholder="blur"
+                  blurDataURL={item?.cover}
+                />
+              )}
+            </section>
+            <div className="absolute top-0 z-40 h-full w-full bg-black opacity-50" />
+          </div>
+        ))}
+      </TypedSlider>
+      <div className="absolute bottom-36 md:bottom-20 md:w-2/3">
+        <div
+          className="uppercase px-10 md:px-40  font-bold text-white text-3xl lg:text-4xl"
+          data-sal="slide-down"
+          data-delay="1000"
+          data-sal-duration={1000}
+        >
+          YOU TRUSTED LOGISTIC <a className="text-[#277ecd]">PARTNER</a> IN
+          WORLDWIDE SMART WAY
+        </div>
+      </div>
     </div>
   );
 };
