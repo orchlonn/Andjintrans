@@ -14,9 +14,8 @@
   "dependencies": {
     "@types/slick-carousel": "^1.6.37",
     "antd": "^4.18.4",
-    "google-map-react": "^2.1.10",
     "moment": "^2.29.1",
-    "next": "^14.2.0",
+    "next": "^15.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.3.1",
